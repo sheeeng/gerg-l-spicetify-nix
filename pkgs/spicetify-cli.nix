@@ -4,7 +4,7 @@
   fetchFromGitHub,
 }:
 let
-  version = "2.40.7";
+  version = "2.40.9";
 in
 buildGoModule {
   pname = "spicetify-cli";
@@ -14,7 +14,7 @@ buildGoModule {
     owner = "spicetify";
     repo = "cli";
     tag = "v${version}";
-    hash = "sha256-iNRjRfRrK/pLL4xZX6Q/LV45NyNG1u4CyQGZtZYb2X8=";
+    hash = "sha256-x3M6AbFiVCk1LM3k+D+NAnOclu90LAuBgYI/cBLpH3A=";
   };
 
   vendorHash = "sha256-901njlGcAxr12F9w6yQ+ESsptlwsZsMvKPUmlHxehmA=";
