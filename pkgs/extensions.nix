@@ -184,9 +184,24 @@ let
     name = "QueueTime.js";
   };
 
+  coverAmbience = {
+    src = "${sources.theblockbusterSrc}/CoverAmbience";
+    name = "CoverAmbience.js";
+  };
+
+  sleepTimer = {
+    src = "${sources.theblockbusterSrc}/SleepTimer";
+    name = "SleepTimer.js";
+  };
+
   simpleBeautifulLyrics = {
     src = "${sources.kamilooSrc}/extensions/simple-beautiful-lyrics/dist";
     name = "simple-beautiful-lyrics.js";
+  };
+
+  catJamSynced = {
+    src = "${sources.catJamSyncedSrc}/marketplace";
+    name = "cat-jam.js";
   };
 
   sanitizeName =
@@ -291,7 +306,10 @@ in
       oneko
       starRatings
       queueTime
+      coverAmbience
+      sleepTimer
       simpleBeautifulLyrics
+      catJamSynced
     ]
 
   )
@@ -315,4 +333,7 @@ in
 // (mkExtAlias "oneko.js" oneko)
 // (mkExtAlias "starRatings.js" starRatings)
 // (mkExtAlias "queueTime.js" queueTime)
+// (mkExtAlias "coverAmbience.js" coverAmbience)
+// (mkExtAlias "sleepTimer.js" sleepTimer)
 // (mkExtAlias "simpleBeautifulLyrics.js" simpleBeautifulLyrics)
+// (mkExtAlias "catJamSynced.js" catJamSynced)

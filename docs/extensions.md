@@ -255,6 +255,14 @@ Rate your music out of 5 stars
 
 Simply displays the time remaining in the current queue.
 
+### coverAmbience
+
+Produces a lovely aesthetic glow from the currently playing album cover.
+
+### sleepTimer
+
+Ported from mobile, automatically pause music after a certain number of minutes or songs.
+
 ### simpleBeautifulLyrics
 
 Enhance your full-screen song lyrics experience with this simple theme for
@@ -275,3 +283,7 @@ Restore the old behaviour of clicking on the album cover in the playback bar
 ### bestMoment
 
 Let you select and listen to a specific segment of the track
+
+### catJamSynced
+
+Lets a cat jam in sync with the beat of your music
