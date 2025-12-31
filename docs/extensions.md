@@ -23,7 +23,7 @@ programs.spicetify.enabledExtensions = [
 ];
 ```
 
-Almost all extension PR's will be merged quickly view the git history of
+Almost all extension PR's will be merged quickly, view the git history of
 /pkgs/extensions.nix for PR examples
 
 ## Official Extensions
@@ -287,3 +287,7 @@ Let you select and listen to a specific segment of the track
 ### catJamSynced
 
 Lets a cat jam in sync with the beat of your music
+
+### aiBandBlocker
+
+Automatically skip any known-AI artists
