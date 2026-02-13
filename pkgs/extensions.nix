@@ -160,7 +160,7 @@ let
   };
 
   beautifulLyrics = {
-    src = "${sources.beautifulLyricsSrc}/Builds/Release";
+    src = "${sources.beautifulLyricsSrc}/Extension/Builds/Release";
     name = "beautiful-lyrics.mjs";
   };
 
@@ -207,6 +207,10 @@ let
   aiBandBlocker = {
     src = "${sources.aiBandBlockerSrc}/dist";
     name = "ai_band_blocker.js";
+  };
+  sortPlay = {
+    src = sources.sortPlay;
+    name = "sort-play.js";
   };
 
   sanitizeName =
@@ -316,6 +320,7 @@ in
       simpleBeautifulLyrics
       catJamSynced
       aiBandBlocker
+      sortPlay
     ]
 
   )
@@ -344,3 +349,4 @@ in
 // (mkExtAlias "simpleBeautifulLyrics.js" simpleBeautifulLyrics)
 // (mkExtAlias "catJamSynced.js" catJamSynced)
 // (mkExtAlias "aiBandBlocker.js" aiBandBlocker)
+// (mkExtAlias "sort-play.js" sortPlay)

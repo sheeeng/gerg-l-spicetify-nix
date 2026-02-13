@@ -11,7 +11,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: checkout
-        uses: actions/checkout@v6.0.1
+        uses: actions/checkout@v6.0.2
       - uses: cachix/install-nix-action@v31
       - name: setup git
         run: | 
@@ -25,6 +25,7 @@ jobs:
       - id: flake
         name: flake
         run: |
+          set -euxo pipefail
           MESSAGE="
           flake input updates:
           $(nix flake update --no-warn-dirty 2>&1 | { grep -v 'unpacking.*' || true; } | sed '1d')"
@@ -41,9 +42,10 @@ jobs:
       - id: npins
         name: npins
         run: |
+          set -euxo pipefail
           MESSAGE="
           npins updates:
-            $(nix run nixpkgs#npins -- -d ./pkgs/npins update -f 2>&1 | { grep '.*Changes:$\|.*url:.*' || true; })"
+          $(nix run nixpkgs#npins -- --lock-file ./pkgs/npins/sources.json update -f 2>&1 | { grep '.*Changes:$\|.*revision:.*' || true; })"
 
           if [ -n "$(git diff-files 2>&1)" ]; then
             git add -A
@@ -55,11 +57,14 @@ jobs:
           fi
       - name: fetcher
         run: |
+          set -euxo pipefail
           pushd pkgs
           nix run .#fetcher
+          git add generated.json
           popd
       - name: Commit and push
         run: |
+          set -euxo pipefail
           MESSAGE="
           ${{ steps.flake.outputs.message }}
           ${{ steps.npins.outputs.message }}
