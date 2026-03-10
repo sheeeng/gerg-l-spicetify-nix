@@ -1,11 +1,6 @@
 {
   inputs = {
-    nixpkgs = {
-      type = "github";
-      owner = "NixOS";
-      repo = "nixpkgs";
-      ref = "nixos-unstable";
-    };
+    nixpkgs.url = "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
     systems = {
       type = "github";
       owner = "nix-systems";
@@ -38,7 +33,7 @@
         }
       );
 
-      formatter = eachSystem (pkgs: pkgs.nixfmt-rfc-style);
+      formatter = eachSystem (pkgs: pkgs.nixfmt);
 
       devShells = eachSystem (pkgs: {
         default = pkgs.mkShellNoCC { packages = [ pkgs.npins ]; };
