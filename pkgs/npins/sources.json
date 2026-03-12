@@ -133,6 +133,19 @@
       "url": "https://github.com/nimsandu/spicetify-bloom/archive/654cfed682b94613b0029997ffafc1eadccc5bef.tar.gz",
       "hash": "sha256-+pIf2N/yR8XwltRStSePUWDkm2x96hBbDrHbCF8a86k="
     },
+    "bojanraicSrc": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "bojanraic",
+        "repo": "spicetify-extensions"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "64084cbcd07e3588e4714f7c54c2c9fa6a448678",
+      "url": "https://github.com/bojanraic/spicetify-extensions/archive/64084cbcd07e3588e4714f7c54c2c9fa6a448678.tar.gz",
+      "hash": "sha256-pK2j7RvwSqf+Eu5+UaPwCy24hehOeLn+HcAZQEosZpQ="
+    },
     "catJamSyncedSrc": {
       "type": "Git",
       "repository": {
@@ -587,6 +600,22 @@
       "revision": "1c1ab133654b642f63359a4daa52ed1d209f419f",
       "url": "https://github.com/hoeci/sort-play/archive/1c1ab133654b642f63359a4daa52ed1d209f419f.tar.gz",
       "hash": "sha256-in0rFiOjEWx0o0ebYcg5h3WQsKXsqsqD0mDrFL7Vb8E="
+    },
+    "spicyLyricsSrc": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Spikerko",
+        "repo": "spicy-lyrics"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "5.19.12",
+      "revision": "d221033de0cdc73b6d19a1d42c08a4c1e7859ad6",
+      "url": "https://api.github.com/repos/Spikerko/spicy-lyrics/tarball/refs/tags/5.19.12",
+      "hash": "sha256-htGtfA6PwAyrHS7WMska7UINVerVBukXQ+tLQxxfnlo="
     },
     "starRatingsSrc": {
       "type": "Git",
